@@ -1,5 +1,8 @@
 const userinput=document.querySelector<HTMLInputElement|any|null>('input')
 const addUserInput=document.querySelector<any>('.add')
+const delbtn=document.querySelector('.del')
+const itemlist=document.querySelector('ul')
+const items=document.querySelectorAll('li')
 
 console.log(userinput,addUserInput)
 // add func
@@ -28,6 +31,9 @@ const addItem=()=>{
     }
     userinput.value=''
 }
+const handledelete=(item:any)=>{
+    itemlist?.removeChild(item);
+}
 addUserInput.addEventListener('click',()=>{
     addItem();
 })
@@ -35,4 +41,12 @@ userinput.addEventListener('keypress',(e:any)=>{
     if(e.key==='Enter'){
         addItem();
     }
+})
+
+// delete
+items.forEach(item=>{
+   
+    delbtn?.addEventListener('click',()=>{
+        handledelete(item);
+    })
 })
