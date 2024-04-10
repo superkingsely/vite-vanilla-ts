@@ -62,6 +62,12 @@ ul li {
   display: flex;
   align-items: center;
 }
+ul li.checked p{
+  text-decoration: line-through;
+}
+ul li.checked span{
+  background-color: greenyellow;
+}
 li p {
   flex-grow: 1;
   margin-left: 1vw;

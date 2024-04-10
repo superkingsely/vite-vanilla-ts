@@ -38,10 +38,12 @@ userinput.addEventListener('keypress',(e:any)=>{
     }
 })
 ul?.addEventListener('click',(e:any)=>{
-    // console.log(e.target)
-    // console.log(e.target.tagName,e.target.parentElement)
+    console.log(e.target)
+    console.log(e.target.tagName,e.target.parentElement)
     if (e.target.tagName==='BUTTON'){
         e.target.parentElement.remove();
         // console.log('u just clicked delete ?')
+    }else if(e.target.tagName==='SPAN'){
+        e.target.parentElement.classList.toggle('checked')
     }
 })
