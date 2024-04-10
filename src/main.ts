@@ -1,5 +1,6 @@
 const userinput=document.querySelector<HTMLInputElement|any|null>('input')
 const addUserInput=document.querySelector<any>('.add')
+const ul=document.querySelector('ul')
 
 console.log(userinput,addUserInput)
 // add func
@@ -34,5 +35,13 @@ addUserInput.addEventListener('click',()=>{
 userinput.addEventListener('keypress',(e:any)=>{
     if(e.key==='Enter'){
         addItem();
+    }
+})
+ul?.addEventListener('click',(e:any)=>{
+    // console.log(e.target)
+    // console.log(e.target.tagName,e.target.parentElement)
+    if (e.target.tagName==='BUTTON'){
+        e.target.parentElement.remove();
+        // console.log('u just clicked delete ?')
     }
 })
