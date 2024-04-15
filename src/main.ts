@@ -25,7 +25,7 @@ const addItem=(e:any)=>{
 
 
             }else{
-                console.log('not good')
+                console.log('not goood')
             }
         })
         // console.log('come one=',newwordList)
