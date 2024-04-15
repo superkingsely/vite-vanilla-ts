@@ -15,25 +15,26 @@ const addItem=(e:any)=>{
         // [1,2].forEach
 
         console.log(userinput.value,'=val',e.target.parentElement.nextElementSibling.childNodes,'=e target oh')
-        let newwordList=e.target.parentElement.nextElementSibling.childNodes
-      let newword=newwordList.forEach((ite:any)=>{
+
+        e.target.parentElement.nextElementSibling.childNodes.forEach((ite:any)=>{
             // console.log(ite)
+
             if(ite.tagName==='LI'){
-                console.log('good',ite.firstElementChild.nextElementSibling)
-                return ite.firstElementChild.nextElementSibling;
+                console.log('good iner',ite.firstElementChild.nextElementSibling.innerText)
+                // return ite.firstElementChild.nextElementSibling;
+
+
             }else{
                 console.log('not good')
             }
         })
-        console.log('come one=',newword)
-
-
-
-        if(userinput.value ===newwordList.innerText){
+        // console.log('come one=',newwordList)
+        let newword=''
+        if(userinput.value ===newword){
             console.log('work!!!')
 
             // let newwordList=userinput.value
-            console.log(newwordList,'isee')
+            console.log(newword,'isee')
 
 
             // userinput.value=''
@@ -64,6 +65,8 @@ const addItem=(e:any)=>{
             item.appendChild(del)
             
         }
+
+
 
     }
     userinput.value=''
