@@ -1,35 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todos</title>
-    <link rel="stylesheet" href="./src/style.css">
-  </head>
-  <body>
-    <div id="app">
-      <div class="todo-app">
-        <div class="add-container">
-          <input type="text">
-          <span class="add">A</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crud</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div class="app">
+       <div class="form-container">
+        <form class="create-form">
+          <input type="text" class="name" 
+          placeholder="Name here"
+          /> 
+          <input type="email" class="email" 
+          placeholder="Email here"
+          />
+          <button type="button">create</button>
+        </form>
+        <form class="update-form">
+          <input type="text" class="unname" /> 
+          <input type="email" class="unemail" />
+          <button type="button">update</button>
+        </form>
+        <div class="add-div">
+          <button>add +</button>
         </div>
-        <ul class="items">
-          <!-- <li>
-            <span class="list-style"></span>
-            <p>item 1</p>
-            <button class="del">delete</button>
-          </li>
-          <li>
-            <span class="list-style"></span>
-            <p>item 2</p>
-            <button class="del">delete</button>
-            <span class="delete"></span>
-          </li> -->
-        </ul>
-      </div>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-    <!-- <script src="./src/main.ts"></script> -->
-  </body>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+       </div>   
+  </div>
+  </div>
+  <script src="./src/main.ts"></script>
+</body>
 </html>
