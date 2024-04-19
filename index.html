@@ -6,10 +6,11 @@
   <title>Crud</title>
   <link rel="stylesheet" href="./src/style.css">
 </head>
-<body>
+<body onload="readAll();">
   <div class="app">
        <div class="form-container">
         <form class="create-form">
+          <input type="hidden" name="id" id="id">
           <input type="text" class="name" 
           placeholder="Name here"
           /> 
@@ -19,12 +20,18 @@
           <button type="button">create</button>
         </form>
         <form class="update-form">
-          <input type="text" class="unname" /> 
-          <input type="email" class="unemail" />
+          <input type="hidden" name="id" id="id">
+          <input type="text" class="unname" 
+          placeholder="Edit Name Here"
+          /> 
+          <input type="email" class="unemail" 
+          placeholder="Edit Email Here"
+
+          />
           <button type="button">update</button>
         </form>
         <div class="add-div">
-          <button>add +</button>
+          <button onclick="addBtn()">add +</button>
         </div>
         <table>
           <thead>
@@ -32,8 +39,11 @@
             <th>Email</th>
             <th>Action</th>
           </thead>
-          <tbody>
-            
+          <tbody class="tableBody">
+            <!-- <tr></tr> -->
+            <!-- <tr class="empty">
+              <td colspan="3" height="200px">YOUR DATA IS EMTY</td>
+           </tr> -->
           </tbody>
         </table>
        </div>   

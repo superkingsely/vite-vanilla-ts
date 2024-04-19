@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-weight: 20px;
+  user-select: none;
 }
 
 .app{
@@ -33,18 +35,39 @@
   width: 100%;
   
 }
-.add-div button{
-  border: 2px solid ;
-  height: 29px;
+button{
+  border: 1px solid ;
+  height: 30px;
   width: 60px;
   border-radius: 5px;
 }
+.add-div button{
+  border: 1px solid ;
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+}
+
 .create-form, .update-form {
   width: 100%;
   display: none;
   gap: 1vw;
 
 }
+
+
+
+/* js */
+
+.create-form.add{
+  width: 100%;
+  display: flex;
+}
+.update-form.add{
+  width: 100%;
+  display: flex;
+}
+
 .create-form input{
   border: 2px solid greenyellow;
   height: 29px;
@@ -72,6 +95,33 @@
 }
 table{
   width: 100%;
-  border: 2px solid ;
+  border: 2px solid blue;
 }
 
+tbody {
+  border: 2px solid red;
+  background-color: aqua;
+}
+tbody tr{
+  border: 2px solid red;
+  background-color: rgb(208, 255, 0);
+}
+th{
+  padding: 5px 0;
+}
+tr td{
+  text-align: center;
+  padding: 5px 0;
+
+}
+/* .empty{
+  display: none;
+}
+.empty.show{
+  display: flex;
+  width: 100%;
+  border: 2px solid;
+}
+.empty.show td{
+  width: 100%;
+} */
