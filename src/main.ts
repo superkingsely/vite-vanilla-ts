@@ -159,6 +159,29 @@ const addBtn=()=>{
     // updateBtn.style.display='none'
 }
 
+const create=()=>{
+    const createDiv:any=document.querySelector('.create-form')
+    const namesel:any=document.querySelector('.name')
+    const emailsel:any=document.querySelector('.email')
+    let name:any=namesel.value;
+    let email:any=emailsel.value;
+    const id:any=data.length+1
+    console.log('see d id',id)
+    const nwobj:any={id:id,name:name,email:email}
+    data.push(nwobj)
+    createDiv.classList.remove('add')
+    readAll();
+    addinner.innerText='add +'
+     name=namesel.value=''
+     email=emailsel.value=''
+
+}
+// ENTER
+const enter:any=document.querySelector('.enterInput')
+enter.addEventListener('keypress',()=>{
+
+})
+
 const editBtn=(id:any,e:any)=>{
     let editinner:any=document.querySelectorAll('.editBtn')
     let obj:any=data.find((obj:any)=>obj.id===id)
@@ -191,4 +214,7 @@ const deleteBtn=(id:any)=>{
     alert('delete rght')
 
     
+}
+window.onload=()=>{
+    readAll();
 }
